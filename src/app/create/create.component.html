@@ -1,0 +1,252 @@
+<div class="container mt-5">
+  <form [formGroup]="userForm">
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="floatingToken"
+        type="text"
+        class="form-control"
+        formControlName="token"
+        placeholder="Immetti Token Bot Telegram"
+      />
+      <label for="floatingToken">Token Bot Telegram</label>
+    </div>
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="floatingGruppo_telegram"
+        type="text"
+        class="form-control"
+        formControlName="gruppo_telegram"
+        placeholder="Immetti chat id"
+      />
+      <label for="floatingGruppo_telegram">Chat ID</label>
+    </div>
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="floatingServer_mqtt"
+        type="text"
+        class="form-control"
+        formControlName="server_mqtt"
+        placeholder="Immetti MQTT Server"
+      />
+      <label for="floatingServer_mqtt">MQTT Server</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="floatingSoglia_lux"
+        type="number"
+        class="form-control"
+        formControlName="Soglia_lux"
+        placeholder="Immetti Soglia lux"
+      />
+      <label for="floatingSoglia_lux">Soglia lux</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="floatingID_videocamera"
+        type="string"
+        class="form-control"
+        formControlName="id_videocamera"
+        placeholder="Immetti msgMQTT"
+      />
+      <label for="floatingID_videocamera">msgMQTT</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="floatingTopic_allarme"
+        type="string"
+        class="form-control"
+        formControlName="topic_allarme"
+        placeholder="Immetti Topic Allarme"
+      />
+      <label for="floatingTopic_allarme">Topic Allarme</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="topic_videocamere"
+        type="string"
+        class="form-control"
+        formControlName="topic_videocamere"
+        placeholder="Immetti Topic Videocamere"
+      />
+      <label for="topic_videocamere">Topic Videocamere</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="risoluzione"
+        type="string"
+        class="form-control"
+        formControlName="risoluzione"
+        placeholder="Immetti Risoluzione"
+      />
+      <label for="risoluzione">Risoluzione</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="qualita"
+        type="number"
+        class="form-control"
+        formControlName="qualita"
+        placeholder="Immetti Qualità codifica"
+      />
+      <label for="qualita">Qualità codifica</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="profilo"
+        type="string"
+        class="form-control"
+        formControlName="profilo"
+        placeholder="Immetti Profilo codifica"
+      />
+      <label for="profilo">Profilo codifica</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="bitrate"
+        type="number"
+        class="form-control"
+        formControlName="bitrate"
+        placeholder="Immetti Bitrate codifica"
+      />
+      <label for="bitrate">Bitrate codifica</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="secondi_rec"
+        type="number"
+        class="form-control"
+        formControlName="secondi_rec"
+        placeholder="Immetti Durata Registrazione (secondi)"
+      />
+      <label for="secondi_rec">Durata Registrazione (secondi)</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="indirizzo_live"
+        type="string"
+        class="form-control"
+        formControlName="indirizzo_live"
+        placeholder="Immetti Indirizzo live streaming"
+      />
+      <label for="indirizzo_live">Indirizzo live streaming</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="nome_camera"
+        type="string"
+        class="form-control"
+        formControlName="nome_camera"
+        placeholder="Nome Videocamera"
+      />
+      <label for="nome_camera">Nome Videocamera</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="durata_allarme"
+        type="string"
+        class="form-control"
+        formControlName="durata_allarme"
+        placeholder="Durata allarme (secondi)"
+      />
+      <label for="durata_allarme">Durata allarme (secondi)</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="flag_debug"
+        type="string"
+        class="form-control"
+        formControlName="flag_debug"
+        placeholder="Flag Debug"
+      />
+      <label for="flag_debug">Flag Debug</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="flag_notifiche"
+        type="string"
+        class="form-control"
+        formControlName="flag_notifiche"
+        placeholder="Flag Solo Notifiche"
+      />
+      <label for="flag_notifiche">Flag Solo Notifiche</label>
+    </div>
+
+    <div class="form-floating col-lg-5 mt-2">
+      <input
+        id="flag_centralina"
+        type="string"
+        class="form-control"
+        formControlName="flag_centralina"
+        placeholder="Flag Standalone"
+      />
+      <label for="flag_centralina">Flag Standalone</label>
+    </div>
+
+    <div class="mt-2">
+    <mat-form-field appearance="fill" >
+      <mat-label>Selezionare tipo installazione</mat-label>
+      <mat-select [formControl]="flag_standaloneControl">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let flag of flags_centralina" [value]="flag.value">
+          {{ flag.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    </div>
+    <p>Selected: {{ flag_standaloneControl.value }}</p>
+
+    <div class="col-lg-4 mt-2" *ngIf="!getparamid" (click)="userSubmit()">
+      <button class="btn btn-primary btn-sm">Create</button>
+    </div>
+
+    <div class="col-lg-4 mt-2" *ngIf="getparamid" (click)="userUpdate()">
+      <button class="btn btn-dark btn-sm">Update</button>
+    </div>
+  </form>
+
+  <div class="mt-4">
+    <!-- show errormsg -->
+    <div
+      *ngIf="errormsg"
+      class="alert alert-warning alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>{{ errormsg }}</strong>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+
+    <!-- show successmsg -->
+    <div
+      *ngIf="successmsg"
+      class="alert alert-success alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>{{ successmsg }}</strong>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+  </div>
+</div>

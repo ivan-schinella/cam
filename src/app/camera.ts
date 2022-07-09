@@ -1,0 +1,21 @@
+export interface Camera {
+  id: number,
+  gruppo_telegram: string,
+  token: string,
+  server_mqtt: string,
+  Soglia_lux: number,
+  id_videocamera: string,
+  topic_allarme: string,
+  topic_videocamere: string,
+  risoluzione: string,
+  qualita: number,
+  profilo: string,
+  bitrate: number,
+  secondi_rec: number,
+  indirizzo_live: string,
+  flag_debug: boolean,
+  flag_notifiche: boolean,
+  flag_centralina: boolean,
+  nome_camera: string,
+  durata_allarme: number
+}

@@ -1,0 +1,64 @@
+<div class="container mt-5">
+  <div class="mt-4">
+    <!-- show successmsg -->
+    <div
+      *ngIf="successmsg"
+      class="alert alert-success alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>{{ successmsg }}</strong>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">Edits</th>
+          <th scope="col">#</th>
+          <th scope="col">Nome camera</th>
+          <th scope="col">msgMQTT</th>
+          <th scope="col">Topic allarme</th>
+          <th scope="col">Topic videocamere</th>
+          <th scope="col">Indirizzo live streaming</th>
+          <th scope="col">Flag debug</th>
+          <th scope="col">Flag Solo Notifiche</th>
+          <th scope="col">Flag Standalone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cam of readData">
+          <td>
+            <button
+              class="btn btn-sm btn-danger me-2 badge"
+              (click)="deleteID(cam.id)"
+            >
+              Delete
+            </button>
+            <button
+              [routerLink]="['/create', cam.id]"
+              class="btn btn-sm btn-success me-2 badge"
+            >
+              Update
+            </button>
+          </td>
+          <th scope="row">{{ cam.id }}</th>
+          <td>{{ cam.nome_camera }}</td>
+          <td>{{ cam.id_videocamera }}</td>
+          <td>{{ cam.topic_allarme }}</td>
+          <td>{{ cam.topic_videocamere }}</td>
+          <td>{{ cam.indirizzo_live }}</td>
+          <td>{{ cam.flag_debug }}</td>
+          <td>{{ cam.flag_notifiche }}</td>
+          <td>{{ cam.flag_centralina }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
