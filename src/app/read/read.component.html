@@ -36,16 +36,18 @@
         <tr *ngFor="let cam of readData">
           <td>
             <button
-              class="btn btn-sm btn-danger me-2 badge"
-              (click)="deleteID(cam.id)"
-            >
-              Delete
-            </button>
-            <button
+              mat-icon-button
+              color="primary"
               [routerLink]="['/create', cam.id]"
-              class="btn btn-sm btn-success me-2 badge"
-            >
-              Update
+              matTooltip="Cancella la configurazione senza chiedere conferma"
+              matTooltipShowDelay="1000"
+              matTooltipHideDelay="1000"
+              >
+              <mat-icon>edit</mat-icon>
+            </button>
+
+            <button mat-icon-button color="warn" (click)="deleteID(cam.id)">
+              <mat-icon>delete</mat-icon>
             </button>
           </td>
           <th scope="row">{{ cam.id }}</th>
